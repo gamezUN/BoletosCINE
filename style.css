@@ -1,0 +1,165 @@
+/* Estilos Globales Modernos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121824;
+    color: #e2e8f0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #ff4757;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #94a3b8;
+}
+
+/* ERROR INTENCIONAL / REQUISITO CSS: 
+   El contenedor principal debe alinear las dos tarjetas de forma paralela en pantallas grandes 
+   y una debajo de la otra en pantallas móviles (responsivo). Actualmente bloquea el flujo. */
+.contenedor-principal {
+    display: block; /* CAMBIAR ESTO POR EL MODELO FLEXBOX ADECUADO */
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    flex: 1; /* Esto ayudará cuando se active Flexbox en el contenedor */
+    margin-bottom: 20px; /* Temporal mientras no hay flex-wrap */
+}
+
+.tarjeta h2 {
+    color: #ff4757;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 10px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0f172a;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.opciones-inline, .opciones-vertical {
+    background-color: #0f172a;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #475569;
+}
+
+.opciones-inline label {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.opciones-vertical label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.opciones-vertical label:last-child {
+    margin-bottom: 0;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #ff4757;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #ff6b81;
+}
+
+/* Resumen y Alertas */
+.resumen h3 {
+    font-size: 1.6rem;
+    color: #2ed573;
+    margin-top: 15px;
+}
+
+.detalle-resumen p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #475569;
+    margin: 15px 0;
+}
+
+.alerta {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #ff475722;
+    border: 1px solid #ff4757;
+    color: #ff6b81;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #64748b;
+    font-size: 0.85rem;
+}
