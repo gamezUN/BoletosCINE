@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineTopia - Reserva de Boletos</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>🎬 CineTopia: Taquilla Digital</h1>
@@ -16,7 +18,7 @@
         <section class="tarjeta">
             <h2>Configura tu Función</h2>
             <form id="formulario-cine">
-                
+
                 <div class="campo">
                     <label for="pelicula">Película:</label>
                     <select id="pelicula" required>
@@ -24,7 +26,7 @@
                         <option value="120">Aventura Espacial ($120 MXN)</option>
                         <option value="100">Mansión Embrujada ($100 MXN)</option>
                         <option value="90">Romance en paris($90 MXN)</option>
-                        </select>
+                    </select>
                 </div>
 
                 <div class="campo">
@@ -36,20 +38,22 @@
                     <label>Tipo de Asiento:</label>
                     <div class="opciones-inline">
                         <label>
-                            <input type="radio" name="asiento" value="tradicional" checked> Tradicional (Sin costo extra)
+                            <input type="radio" name="asiento" value="tradicional" checked> Tradicional (Sin costo
+                            extra)
                         </label>
 
-                          <label>
+                        <label>
                             <input type="radio" name="asiento" value="VIP"> VIP ($50MXN)
                         </label>
-                        </div>
+                    </div>
                 </div>
 
                 <div class="campo">
                     <label>Agrega un Combo de Comida:</label>
                     <div class="opciones-vertical">
                         <label>
-                            <input type="checkbox" id="combo-palomitas" value="150"> Combo Palomitas + Refresco ($150 MXN)
+                            <input type="checkbox" id="combo-palomitas" value="150"> Combo Palomitas + Refresco ($150
+                            MXN)
                         </label>
                         <label>
                             <input type="checkbox" id="combo-hotdog" value="120"> Combo HotDog + Refresco ($120 MXN)
@@ -58,11 +62,13 @@
                         <label>
                             <input type="checkbox" id="combo-hotdog" value="120"> Combo HotDog + Refresco ($120 MXN)
                         </label>
-                        </div>
 
-                            <input type="checkbox" id="combo-pareja" value="150"> Combo HotDog + Refrescos + Nachos ($150 MXN)
+
+                        <input type="checkbox" id="combo-pareja" value="150"> Combo HotDog + Refrescos + Nachos ($150
+                        MXN)
                         </label>
-                        </div>
+                    </div>
+                </div>
                 </div>
 
                 <button type="button" id="btn-calcular">Calcular Total</button>
@@ -88,4 +94,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
