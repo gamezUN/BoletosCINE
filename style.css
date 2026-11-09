@@ -1,4 +1,3 @@
-/* Estilos Globales Modernos */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,9 +27,6 @@ header p {
     color: #94a3b8;
 }
 
-/* ERROR INTENCIONAL / REQUISITO CSS: 
-   El contenedor principal debe alinear las dos tarjetas de forma paralela en pantallas grandes 
-   y una debajo de la otra en pantallas móviles (responsivo). Actualmente bloquea el flujo. */
 .contenedor-principal {
     display: flex;
     flex-wrap: wrap;
@@ -123,7 +119,6 @@ button:hover {
     background-color: #ff6b81;
 }
 
-/* Resumen y Alertas */
 .resumen h3 {
     font-size: 1.6rem;
     color: #2ed573;
