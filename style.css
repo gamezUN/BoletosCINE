@@ -32,7 +32,8 @@ header p {
    El contenedor principal debe alinear las dos tarjetas de forma paralela en pantallas grandes 
    y una debajo de la otra en pantallas móviles (responsivo). Actualmente bloquea el flujo. */
 .contenedor-principal {
-    display: flex; /* CAMBIAR ESTO POR EL MODELO FLEXBOX ADECUADO */
+    display: flex;
+    flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
     gap: 20px;
@@ -44,8 +45,8 @@ header p {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border: 1px solid #334155;
-    flex: 2; /* Esto ayudará cuando se active Flexbox en el contenedor */
-    margin-bottom: 20px; /* Temporal mientras no hay flex-wrap */
+    flex: 1 1 420px;
+    margin-bottom: 20px;
 }
 
 .tarjeta h2 {

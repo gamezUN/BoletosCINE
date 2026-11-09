@@ -1,15 +1,14 @@
 // EVENTO: Escuchar el clic en el botón de calcular
 document.getElementById('btn-calcular').addEventListener('click', function() {
-    
+
     // 1. OBTENCIÓN DE ENTRADAS (INPUTS)
     const selectPelicula = document.getElementById('pelicula');
     const precioPelicula = parseFloat(selectPelicula.value);
-    
+
     const inputCantidad = document.getElementById('cantidad');
     const cantidad = parseInt(inputCantidad.value);
 
     // REQUISITO JS 1: Capturar el botón de tipo radio seleccionado para "asiento"
-    // Pista: Usa querySelector con el name del atributo.
     const asientoSeleccionado = document.querySelector('input[name="asiento"]:checked');
 
     // 2. VALIDACIÓN INICIAL
@@ -23,38 +22,33 @@ document.getElementById('btn-calcular').addEventListener('click', function() {
     }
 
     // 3. LÓGICA DE CÁLCULO
-    // Cálculo base de los boletos
     let subtotalBoletos = precioPelicula * cantidad;
     let cargosAsiento = 0;
 
-    // REQUISITO JS 2: Estructura condicional (if/else) para los cargos por tipo de asiento
-    // Si el asiento es "vip", el cargo extra es de $50 pesos POR CADA BOLETO.
-    if (asientoSeleccionado && asientoSeleccionado.value === 'VIP') {
-    cargosAsiento = 50 * cantidad;
+    // REQUISITO JS 2: Cargo VIP de $50 por cada boleto
+    if (asientoSeleccionado && asientoSeleccionado.value === 'vip') {
+        cargosAsiento = 50 * cantidad;
     }
 
     // Cálculo de Snacks / Combos
     let totalSnacks = 0;
-    
 
     const comboPalomitas = document.getElementById('combo-palomitas');
     const comboHotdog = document.getElementById('combo-hotdog');
     const comboPareja = document.getElementById('combo-pareja');
-    
 
     if (comboPalomitas && comboPalomitas.checked) {
         totalSnacks += parseFloat(comboPalomitas.value);
     }
-    
+
     if (comboHotdog && comboHotdog.checked) {
-    totalSnacks += parseFloat(comboHotdog.value);
+        totalSnacks += parseFloat(comboHotdog.value);
     }
 
+    // REQUISITO JS 3 y 4: Sumar el Combo Pareja cuando esté seleccionado
     if (comboPareja && comboPareja.checked) {
-    totalSnacks += parseFloat(comboPareja.value);
+        totalSnacks += parseFloat(comboPareja.value);
     }
-    // REQUISITO JS 4: Sumar condicionalmente el valor de "combo-pareja" si el checkbox está activo
-    
 
     // Cálculo final total
     let totalFinal = subtotalBoletos + cargosAsiento + totalSnacks;
